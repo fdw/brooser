@@ -6,6 +6,7 @@ authors = ["Fabian Winter"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+tomli = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 
