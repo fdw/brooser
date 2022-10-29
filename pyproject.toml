@@ -1,15 +1,36 @@
 [tool.poetry]
 name = "brooser"
 version = "0.1.0"
-description = ""
-authors = ["Fabian Winter"]
+description = "Choosing your browser based on the URL"
+authors = ["Fabian Winter <5821180+fdw@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/fdw/brooser"
+repository = "https://github.com/fdw/brooser"
+packages =[
+    { include = "brooser", from = "src" }
+]
+include = [
+    "contrib/brooser.desktop"
+]
+
+[tool.poetry.scripts]
+brooser = 'brooser.__main__:main'
 
 [tool.poetry.dependencies]
 python = "^3.10"
 tomli = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
